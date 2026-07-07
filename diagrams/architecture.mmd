@@ -1,17 +1,36 @@
-flowchart LR
+flowchart TB
 
-    Exporter["Node Exporter"]
+    User["👤 Пользователь"]
+
+    Nginx["Nginx<br/>Reverse Proxy"]
+
+    Site["mal-mbv.ru"]
+
+    Grafana["grafana.mal-mbv.ru"]
+
+    Kuma["status.mal-mbv.ru"]
+
+    Docker["Docker Engine"]
 
     Prometheus["Prometheus"]
 
-    Grafana["Grafana"]
+    Exporter["Node Exporter"]
 
-    Kuma["Uptime Kuma"]
+    VPS["Ubuntu Server 24.04 LTS"]
 
-    Site["Веб-сервисы"]
+    User --> Nginx
 
-    Exporter -->|"Метрики"| Prometheus
+    Nginx --> Site
+    Nginx --> Grafana
+    Nginx --> Kuma
 
-    Prometheus -->|"PromQL"| Grafana
+    Grafana --> Prometheus
+    Prometheus --> Exporter
 
-    Kuma -->|"HTTP / HTTPS проверки"| Site
+    Site -. Static files .-> VPS
+
+    Grafana -. Container .-> Docker
+    Prometheus -. Container .-> Docker
+    Kuma -. Container .-> Docker
+
+    Exporter -. Installed on host .-> VPS
