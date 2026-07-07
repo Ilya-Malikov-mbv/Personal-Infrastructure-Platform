@@ -1,0 +1,19 @@
+```mermaid
+flowchart LR
+
+    Exporter["Node Exporter"]
+
+    Prometheus["Prometheus"]
+
+    Grafana["Grafana"]
+
+    Kuma["Uptime Kuma"]
+
+    Site["Веб-сервисы"]
+
+    Exporter -->|"Метрики"| Prometheus
+
+    Prometheus -->|"PromQL"| Grafana
+
+    Kuma -->|"HTTP / HTTPS проверки"| Site
+```

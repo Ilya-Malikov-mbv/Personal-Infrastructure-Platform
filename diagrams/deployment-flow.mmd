@@ -1,0 +1,22 @@
+flowchart TD
+
+    A["Разработчик"] -->|Push| B["GitHub Repository"]
+
+    B --> C["GitHub Actions"]
+
+    C --> D["SSH-подключение к VPS"]
+
+    D --> E["git pull"]
+
+    E --> F["docker compose up -d"]
+
+    F --> G["Обновление контейнеров"]
+
+    G --> H["Проверка успешного запуска"]
+
+    H --> I["Инфраструктура обновлена"]
+
+    style C fill:#dbeafe
+    style D fill:#dcfce7
+    style G fill:#fef3c7
+    style I fill:#bbf7d0

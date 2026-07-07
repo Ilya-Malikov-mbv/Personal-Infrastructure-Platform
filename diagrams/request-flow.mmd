@@ -1,0 +1,23 @@
+flowchart LR
+
+    User["👤 Пользователь"]
+
+    Internet["Интернет"]
+
+    Nginx["Nginx<br/>Reverse Proxy"]
+
+    Site["Основной сайт"]
+
+    Grafana["Grafana"]
+
+    Kuma["Uptime Kuma"]
+
+    User --> Internet
+
+    Internet --> Nginx
+
+    Nginx -->|mal-mbv.ru| Site
+
+    Nginx -->|grafana.mal-mbv.ru| Grafana
+
+    Nginx -->|status.mal-mbv.ru| Kuma
