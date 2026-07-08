@@ -4,6 +4,18 @@
 
 Проект представляет собой полностью настроенный сервер с HTTPS, обратным прокси, автоматическим развёртыванием через GitHub Actions и системой мониторинга инфраструктуры и доступности сервисов.
 
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Uptime Kuma](https://img.shields.io/badge/Uptime%20Kuma-5CDD8B?style=for-the-badge&logo=uptimekuma&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash&logoColor=white)
+![SSH](https://img.shields.io/badge/SSH-222222?style=for-the-badge&logo=openssh&logoColor=white)
+
 ---
 
 # Архитектура
@@ -78,7 +90,6 @@ flowchart TB
 | Визуализация      | Grafana                 |
 | Uptime Monitoring | Uptime Kuma             |
 | SSL               | Let's Encrypt           |
-| DNS               | Cloudflare              |
 | Защита SSH        | Fail2Ban                |
 | Контроль версий   | Git, GitHub             |
 
